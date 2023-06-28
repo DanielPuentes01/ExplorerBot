@@ -1,1 +1,77 @@
-#a
+# Descomentar si el esp32 estará en modo de acceso AP
+import socket
+from wifiAP import apConfig as connect
+from machine import Pin
+import time
+serverAddressPort = socket.getaddrinfo("0.0.0.0", 3000)[0][-1]
+bufferSize = 128
+# poner acá el nombre de red ssid y password para conectarse
+connect("miRed", "87654321")
+
+# Esta función es de ejemplo,
+# Lo que se plantea acá es saber qué hacer con el dato recibido
+# En el ejemplo solo se está imprimiendo por terminal
+motor_1_Adelante= Pin(32,Pin.OUT)
+motor_1_Atras= Pin(27,Pin.OUT)
+motor_2_Adelante= Pin(33,Pin.OUT)
+motor_2_Atras= Pin(25,Pin.OUT)
+trigger_pin=Pin(26,Pin.OUT)
+echo_pin=Pin(35,Pin.IN)
+sensor_1 = Pin(34, Pin.IN)
+señal_camara= Pin(14,Pin.OUT)
+leds_rojo=Pin(12,Pin.OUT)
+leds_rojo.value(1)
+def exec(data):
+        señal_camara.value(1)
+        if data == b'A' :
+            print("Arriba")
+            motor_1_Adelante.value(1)
+            motor_2_Adelante.value(1)
+            leds_rojo.value(0)
+            print (motor_2_Adelante.value())
+        elif data == b'B':
+            motor_1_Atras.value(1)
+            motor_2_Atras.value(1)
+            leds_rojo.value(1)
+            print("Abajo")
+        elif data == b'C' :
+            motor_1_Adelante.value(1)
+            leds_rojo.value(0)
+            print("Izquierda")
+        elif data == b'D':
+            motor_2_Adelante.value(1)
+            leds_rojo.value(0)
+            print("Derecha")
+        elif data == b'E':
+            motor_1_Adelante.value(0)
+            motor_2_Adelante.value(0)
+            motor_1_Atras.value(0)
+            motor_2_Atras.value(0)
+            print("Detener")
+        else:
+            print("Obstaculo")
+
+sk = socket.socket()
+sk.bind(serverAddressPort)
+sk.listen(1)
+print("Listening on: ", serverAddressPort)
+
+while True:
+    conn, addr = sk.accept()
+    while True:
+        data = conn.recv(bufferSize)
+        
+        # Si dato fue recibido, se decide que hacer con el.
+        if data :
+            exec(data)
+            # Con la siguiente instruccion se pueden enviar datos al
+            # dispositivo conectado
+            conn.sendall("ok")
+            # conn.send("ok")
+        else:
+            señal_camara.value(0)
+            motor_1_Adelante.value(0)
+            motor_2_Adelante.value(0)
+            motor_1_Atras.value(0)
+            motor_2_Atras.value(0)
+    conn.close() 
