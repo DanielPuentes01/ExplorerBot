@@ -1,16 +1,11 @@
-# Descomentar si el esp32 estará en modo de acceso AP
 import socket
 from wifiAP import apConfig as connect
 from machine import Pin
 import time
 serverAddressPort = socket.getaddrinfo("0.0.0.0", 3000)[0][-1]
 bufferSize = 128
-# poner acá el nombre de red ssid y password para conectarse
 connect("miRed", "87654321")
 
-# Esta función es de ejemplo,
-# Lo que se plantea acá es saber qué hacer con el dato recibido
-# En el ejemplo solo se está imprimiendo por terminal
 motor_1_Adelante= Pin(32,Pin.OUT)
 motor_1_Atras= Pin(27,Pin.OUT)
 motor_2_Adelante= Pin(33,Pin.OUT)
@@ -60,14 +55,10 @@ while True:
     conn, addr = sk.accept()
     while True:
         data = conn.recv(bufferSize)
-        
-        # Si dato fue recibido, se decide que hacer con el.
+
         if data :
             exec(data)
-            # Con la siguiente instruccion se pueden enviar datos al
-            # dispositivo conectado
             conn.sendall("ok")
-            # conn.send("ok")
         else:
             señal_camara.value(0)
             motor_1_Adelante.value(0)
