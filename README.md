@@ -1,3 +1,2 @@
 ![Banner](Slide1.JPG)
-
-#Explorer-Bot
+# A first-level heading
