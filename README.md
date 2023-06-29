@@ -3,7 +3,7 @@
 - Johan Arturo Barajas Herrera
 - Jose Alejandro Flores Chenas
 - Daniel Santiago Puentes Villabona
-- Jose Alejandro Flores Chenas
+
 
 Descripcion 
 
