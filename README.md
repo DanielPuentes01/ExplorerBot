@@ -64,6 +64,8 @@ Los objetivos principales de este proyecto son:
 - Conectar y configurar el ESP32 para establecer la conectividad WiFi y permitir controlar los diferentes componentes.
 
 ## IMPLEMENTACION
+Luego de algunos inconvenientes y varias horas de trabajo, podemos apreciar el carrito explorador cerca de ser terminado.
+
 ![](ExplorerBot1.jpg)
 ![](EExplorerBot2.jpg)
 
