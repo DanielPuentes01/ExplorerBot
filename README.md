@@ -23,11 +23,11 @@ Para utilizar el carrito, es necesario conectar un dispositivo (teléfono, compu
 ## LISTA DE MATERIALES
 El proyecto utiliza los siguientes componentes:
 
-- L298N: Controlador de motor de puente H.
+- L298D: Controlador de motor de puente H.
 - ESP32: Módulo de desarrollo con conectividad WiFi.
 - 2 motores DC: Proporcionan la tracción al carrito.
 - Chasis: Estructura que sostiene y protege los componentes del carrito.
-- 1 ruedas: Permiten el movimiento del carrito.
+- 2 ruedas: Permiten el movimiento del carrito.
 - Cables: Para realizar las conexiones entre los componentes.
 - Pin headers o regleta de pines: Facilitan la conexión de los componentes al ESP32.
 
