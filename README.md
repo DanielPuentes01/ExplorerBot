@@ -45,9 +45,15 @@ El proyecto utiliza los siguientes componentes:
 - Cables: Para realizar las conexiones entre los componentes.
 - Pin headers o regleta de pines: Facilitan la conexión de los componentes al ESP32.
 
+
 ## OBJETIVOS DEL PROYECTO
 Los objetivos principales de este proyecto son:
 
 - Diseñar y desarrollar un carrito controlado por WiFi utilizando un ESP32.
 - Construir un chasis que albergue los componentes del carrito.
-- Conectar y configurar el ESP32 para establecer la conectividad WiFi y permitir
+- Conectar y configurar el ESP32 para establecer la conectividad WiFi y permitir controlar los diferentes componentes.
+
+## IMPLEMENTACION
+![](ExplorerBot1.jpg)
+![](EExplorerBot2.jpg)
+
