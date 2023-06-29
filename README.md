@@ -1,2 +1,10 @@
+# Explorer-Bot
 ![Banner](Slide1.JPG)
-# A first-level heading
+
+## Daniel Santiago Puentes Villabona
+## Johan Arturo Barajas Herrera
+## Jose Alejandro Flores Chenas
+
+Descripcion ...
+
+P
