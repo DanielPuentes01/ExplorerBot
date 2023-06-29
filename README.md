@@ -63,7 +63,7 @@ Los objetivos principales de este proyecto son:
 - Construir un chasis que albergue los componentes del carrito.
 - Conectar y configurar el ESP32 para establecer la conectividad WiFi y permitir controlar los diferentes componentes.
 
-## IMPLEMENTACION
+## IMPLEMENTACION Y PRUEBAS
 Luego de algunos inconvenientes y varias horas de trabajo, podemos apreciar el carrito explorador cerca de ser terminado.
 
 ![](ExplorerBot1.jpg)
