@@ -16,12 +16,13 @@ La idea original era controlar el carrito utilizando un seguidor de linea,para e
 Este proyecto se centra en la creación de un carrito inteligente controlado por WiFi a través de un ESP32. El carrito se conecta a una red WiFi y se puede controlar desde cualquier lugar dentro del alcance de la red. El control se realiza a través de una interfaz en un dispositivo móvil o computadora, permitiendo enviar comandos para avanzar, retroceder, girar y detenerse. Este proyecto brinda la oportunidad de aprender sobre programación, electrónica y comunicación inalámbrica en un entorno práctico y educativo.
 
 ## DIAGRAMA DE FLUJO
-Aqui se puede apreciar el funcionamineto del proyecto, de inicio a fin con sus respectivas entradas y salidas, pero sin tener aun tener definidos los diferentes componentesy tecnlogia a usarse.
+Aqui se puede apreciar el funcionamineto del proyecto de inicio a fin con sus respectivas entradas y salidas, pero sin tener aun tener definidos los diferentes componentes y tecnlogias que podrian usarse para el desarrollo del carrito explorador
 
 ![](Diagrama_de_flujo_Explorer_bot.png)
 
 ## CAJA NEGRA
-La siguiente imagen muestra como se implemeto cada una de los componentes y tecnologías, teniendo en cuenta el diagrama de flujo anterior para su desarrollo.
+Tenido en cuenta las diferentes recomendaciones de nuestro docente, se investigo y analizo los diferentes componentes y tecnlogias que pueden usarse para poder darle funcionamineto al carrito explorador.
+La siguiente imagen plasma los componentes y tecnologia que se elegio:
 
 ![Diagrama1](CajaNegraExplorer-Bot.jpeg)
 
